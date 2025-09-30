@@ -1,7 +1,17 @@
 import { serve } from "@hono/node-server";
+// eslint-disable-next-line unused-imports/no-unused-imports
+import { Hono } from "hono";
 
-import app from "./app.js";
 import env from "./env.js";
+import createApp from "./lib/create-app.js";
+
+const app = createApp()
+  .get("/env", (c) => {
+    return c.json(env);
+  })
+  .get("/", (c) => {
+    return c.text("Hello Hono!");
+  });
 
 serve({
   fetch: app.fetch,

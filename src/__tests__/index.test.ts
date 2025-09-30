@@ -2,7 +2,7 @@
 import { testClient } from "hono/testing";
 import { describe, expect, it } from "vitest"; // Or your preferred test runner
 
-import appInstance from "../app.js";
+import appInstance from "../index.js";
 
 describe("Env endpoint", () => {
   // Create the test client from the app instance with proper typing
