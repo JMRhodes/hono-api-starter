@@ -8,6 +8,7 @@ const EnvSchema = z.object({
   NODE_ENV: z.string().default("development"),
   LOG_LEVEL: z.string().optional().default("info"),
   PORT: z.string().min(1).optional().default("3000"),
+  DATABASE_URL: z.url(),
 });
 
 export type env = z.infer<typeof EnvSchema>;

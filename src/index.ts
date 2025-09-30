@@ -4,6 +4,7 @@ import { Hono } from "hono";
 
 import env from "./env.js";
 import createApp from "./lib/create-app.js";
+import tasks from "./routes/tasks/tasks.index.js";
 
 const app = createApp()
   .get("/env", (c) => {
@@ -11,7 +12,8 @@ const app = createApp()
   })
   .get("/", (c) => {
     return c.text("Hello Hono!");
-  });
+  })
+  .route("/tasks", tasks);
 
 serve({
   fetch: app.fetch,
