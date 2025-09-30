@@ -7,3 +7,5 @@ serve({
   fetch: app.fetch,
   port: Number(env.PORT),
 });
+
+export default app;

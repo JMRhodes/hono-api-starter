@@ -1,12 +1,9 @@
-import type { PinoLogger } from "hono-pino";
-
 import { Hono } from "hono";
-
-import { pinoLogger } from "../middlewares/logger.js";
+import { pinoLogger } from "hono-pino";
 
 type Env = {
   Variables: {
-    logger: PinoLogger;
+    logger: typeof pinoLogger;
   };
 };
 
