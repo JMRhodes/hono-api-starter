@@ -1,28 +1,11 @@
-Prerequisites:
+# Hono API Starter
 
-- [Vercel CLI](https://vercel.com/docs/cli) installed globally
+### Features
 
-To develop locally:
-
-```
-npm install
-vc dev
-```
-
-```
-open http://localhost:3000
-```
-
-To build locally:
-
-```
-npm install
-vc build
-```
-
-To deploy:
-
-```
-npm install
-vc deploy
-```
+- ✨ Node 22
+- 🔹 TypeScript 5.8
+- 🔒 Secure headers by default for APIs
+- 🛡️CORS
+- 📚 [Pino Logging](https://github.com/pinojs/pino)
+- 🐶 [Husky for Git Hooks](https://typicode.github.io/husky/)
+- 📦 [Optimized ESLint Config](https://github.com/antfu/eslint-config)
